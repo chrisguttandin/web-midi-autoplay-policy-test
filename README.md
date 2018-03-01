@@ -1,7 +1,5 @@
 # web-midi-autoplay-policy-test
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/chrisguttandin/web-midi-autoplay-policy-test.svg)](https://greenkeeper.io/)
-
 **A demo to test the Web MIDI Autoplay Policy.**
 
 [![tests](https://img.shields.io/travis/chrisguttandin/web-midi-autoplay-policy-test/master.svg?style=flat-square)](https://travis-ci.org/chrisguttandin/web-midi-autoplay-policy-test)

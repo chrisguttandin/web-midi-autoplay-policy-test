@@ -3,6 +3,11 @@
   "bugs": {
     "url": "https://github.com/chrisguttandin/web-midi-autoplay-policy-test/issues"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "description": "A demo to test the Web MIDI Autoplay Policy.",
   "devDependencies": {
     "@commitlint/cli": "^6.1.3",

@@ -59,12 +59,16 @@ const log = (group, message, color = 'black') => {
     const $previousItemOfGroup = $console.querySelector(`[data-group="${ group }"]`);
 
     if ($previousItemOfGroup === null) {
-        $console.insertBefore($item, $console.firstChild);
+        if ($console.firstChild === null) {
+            $console.append($item);
+        } else {
+            $console.firstChild.before($item);
+        }
     } else {
         $item.style.marginTop = '1em';
         $previousItemOfGroup.style.marginTop = null;
 
-        $console.insertBefore($item, $previousItemOfGroup);
+        $previousItemOfGroup.before($item);
     }
 };
 const removeMidiEventListeners = (midiInputs, listener) => {

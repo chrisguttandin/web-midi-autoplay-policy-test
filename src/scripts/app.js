@@ -56,7 +56,7 @@ const log = (group, message, color = 'black') => {
     $item.style.color = color;
     $item.textContent = message;
 
-    const $previousItemOfGroup = $console.querySelector(`[data-group="${ group }"]`);
+    const $previousItemOfGroup = $console.querySelector(`[data-group="${group}"]`);
 
     if ($previousItemOfGroup === null) {
         if ($console.firstChild === null) {
@@ -79,7 +79,7 @@ const removeMidiEventListeners = (midiInputs, listener) => {
 const startLogGroup = (message) => {
     applySpacing();
 
-    const group = ($console.firstChild === null) ? 0 : parseInt($console.firstChild.dataset.group, 10) + 1;
+    const group = $console.firstChild === null ? 0 : parseInt($console.firstChild.dataset.group, 10) + 1;
 
     log(group, message);
 
@@ -96,7 +96,7 @@ const toggleOscillator = (group) => {
 
             audioContext
                 .resume()
-                .then(() => log(group, `The AudioContext was resumed and is now "${ audioContext.state }".`, 'green'))
+                .then(() => log(group, `The AudioContext was resumed and is now "${audioContext.state}".`, 'green'))
                 .then(() => {
                     if (oscillatorNode === null) {
                         createAndStartOscillator(group);
@@ -104,7 +104,7 @@ const toggleOscillator = (group) => {
                         log(group, 'The oscillator has been started in the meantime.', 'red');
                     }
                 })
-                .catch(() => log(group, `The AudioContext could not be resumed and is now "${ audioContext.state }".`, 'red'));
+                .catch(() => log(group, `The AudioContext could not be resumed and is now "${audioContext.state}".`, 'red'));
         }
     } else {
         oscillatorNode.stop();

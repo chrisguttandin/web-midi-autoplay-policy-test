@@ -34,7 +34,7 @@
         "load-grunt-config": "^3.0.1",
         "prettier": "^2.3.1",
         "pretty-quick": "^3.1.0",
-        "webpack": "^5.37.1"
+        "webpack": "^5.39.0"
     },
     "homepage": "https://chrisguttandin.github.io/web-midi-autoplay-policy-test",
     "husky": {

@@ -37,12 +37,6 @@
         "webpack": "^5.39.0"
     },
     "homepage": "https://chrisguttandin.github.io/web-midi-autoplay-policy-test",
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint --edit --extends @commitlint/config-angular",
-            "pre-commit": "pretty-quick --config config/prettier/config.json --staged && grunt lint"
-        }
-    },
     "license": "MIT",
     "main": "src/index.html",
     "name": "web-midi-autoplay-policy-test",
@@ -52,6 +46,7 @@
         "url": "https://github.com/chrisguttandin/web-midi-autoplay-policy-test.git"
     },
     "scripts": {
+        "prepare": "husky install",
         "test": "grunt lint"
     },
     "version": "1.0.17"

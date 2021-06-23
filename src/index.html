@@ -6,15 +6,32 @@
     </head>
     <body>
         <h1>Web MIDI Autoplay Policy test</h1>
-        <p>This is an example to demonstrate a possible <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=817386" target="_blank">bug in Chrome</a> at version 66.0.3358.0.</p>
-        <p>The behaviour in question is only observable without any open DevTools panel which is why all actions are logged to the screen.</p>
-        <p>When pressing the "toggle sound" button a script gets called which tries to turn on a simple oscillator. When pressing the button again the oscillator will stop. For the purpose of this demo the underlying AudioContext was created before and will most likely have a "suspended" state when the button gets pressed for the first time. In that case the AudioContext will be resumed in response to the first click which works absolutely fine.</p>
-        <p>However the script of this page is also listening to any MIDI event and will try to execute the same code as mentioned above. When doing so in response to a MIDI event the promise returned by the AudioContext's resume method doesn't resolve until another user gesture happens.</p>
+        <p>
+            This is an example to demonstrate a possible
+            <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=817386" target="_blank">bug in Chrome</a> at version 66.0.3358.0.
+        </p>
+        <p>
+            The behaviour in question is only observable without any open DevTools panel which is why all actions are logged to the screen.
+        </p>
+        <p>
+            When pressing the "toggle sound" button a script gets called which tries to turn on a simple oscillator. When pressing the
+            button again the oscillator will stop. For the purpose of this demo the underlying AudioContext was created before and will most
+            likely have a "suspended" state when the button gets pressed for the first time. In that case the AudioContext will be resumed
+            in response to the first click which works absolutely fine.
+        </p>
+        <p>
+            However the script of this page is also listening to any MIDI event and will try to execute the same code as mentioned above.
+            When doing so in response to a MIDI event the promise returned by the AudioContext's resume method doesn't resolve until another
+            user gesture happens.
+        </p>
         <button id="toggle-button">toggle sound</button>
         <ol id="console" reversed>
             <!-- The list should be populated by the script. -->
         </ol>
-        <p>The source code of this demo is available on <a href="https://github.com/chrisguttandin/web-midi-autoplay-policy-test" target="_blank">GitHub</a>.</p>
+        <p>
+            The source code of this demo is available on
+            <a href="https://github.com/chrisguttandin/web-midi-autoplay-policy-test" target="_blank">GitHub</a>.
+        </p>
         <script src="scripts/app.js"></script>
     </body>
 </html>

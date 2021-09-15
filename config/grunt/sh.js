@@ -2,6 +2,12 @@ module.exports = (grunt) => {
     const fix = grunt.option('fix') === true;
 
     return {
+        'build-development': {
+            cmd: 'webpack --config config/webpack/development.js'
+        },
+        'build-production': {
+            cmd: 'webpack --config config/webpack/production.js'
+        },
         'hyperlink': {
             cmd: 'hyperlink https://chrisguttandin.github.io/web-midi-autoplay-policy-test'
         },

@@ -33,7 +33,7 @@
         "load-grunt-config": "^4.0.1",
         "prettier": "^2.4.1",
         "pretty-quick": "^3.1.1",
-        "webpack": "^5.53.0",
+        "webpack": "^5.55.1",
         "webpack-cli": "^4.8.0"
     },
     "homepage": "https://chrisguttandin.github.io/web-midi-autoplay-policy-test",

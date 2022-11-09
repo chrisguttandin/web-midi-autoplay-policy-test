@@ -13,7 +13,7 @@
         "@babel/core": "^7.20.2",
         "@babel/preset-env": "^7.20.2",
         "@commitlint/cli": "^17.2.0",
-        "@commitlint/config-angular": "^17.1.0",
+        "@commitlint/config-angular": "^17.2.0",
         "babel-loader": "^8.2.5",
         "commitizen": "^4.2.5",
         "cz-conventional-changelog": "^3.3.0",

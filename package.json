@@ -14,7 +14,7 @@
         "@babel/preset-env": "^7.20.2",
         "@commitlint/cli": "^17.4.1",
         "@commitlint/config-angular": "^17.4.0",
-        "babel-loader": "^9.1.0",
+        "babel-loader": "^9.1.2",
         "commitizen": "^4.2.6",
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.29.0",

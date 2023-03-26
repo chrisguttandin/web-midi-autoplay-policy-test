@@ -8,6 +8,9 @@ module.exports = (grunt) => {
         'build-production': {
             cmd: 'webpack --config config/webpack/production.js'
         },
+        'clean': {
+            cmd: 'rimraf build/*'
+        },
         'hyperlink': {
             cmd: 'hyperlink https://chrisguttandin.github.io/web-midi-autoplay-policy-test'
         },

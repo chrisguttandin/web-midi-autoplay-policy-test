@@ -2,11 +2,8 @@ module.exports = (grunt) => {
     const fix = grunt.option('fix') === true;
 
     return {
-        'build-development': {
-            cmd: 'webpack --config config/webpack/development.js'
-        },
-        'build-production': {
-            cmd: 'webpack --config config/webpack/production.js'
+        'build': {
+            cmd: 'npx webpack --config config/webpack/production.js'
         },
         'clean': {
             cmd: 'rimraf build/*'
@@ -23,6 +20,9 @@ module.exports = (grunt) => {
         'lint-src': {
             cmd: `eslint --config config/eslint/src.json --ext .js ${fix ? '--fix ' : ''}--report-unused-disable-directives src/ && \
                 htmlhint --config config/htmlhint/document.json 'src/**/index.html'`
+        },
+        'monitor': {
+            cmd: 'npx webpack server --config config/webpack/development.js'
         }
     };
 };

@@ -11,6 +11,9 @@ module.exports = (grunt) => {
         'clean': {
             cmd: 'rimraf build/*'
         },
+        'html-minifier': {
+            cmd: 'html-minifier --config-file config/html-minifier/config.json --file-ext html --input-dir src --output-dir build'
+        },
         'hyperlink': {
             cmd: 'hyperlink https://chrisguttandin.github.io/web-midi-autoplay-policy-test'
         },

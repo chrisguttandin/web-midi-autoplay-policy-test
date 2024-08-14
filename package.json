@@ -10,7 +10,7 @@
     },
     "description": "A demo to test the Web MIDI Autoplay Policy.",
     "devDependencies": {
-        "@babel/core": "^7.24.5",
+        "@babel/core": "^7.25.2",
         "@babel/preset-env": "^7.24.5",
         "@commitlint/cli": "^19.3.0",
         "@commitlint/config-angular": "^19.3.0",
